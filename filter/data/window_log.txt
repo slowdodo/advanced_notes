@@ -1,0 +1,5306 @@
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:57:03
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:57:03.6265678Z" />
+    <EventRecordID>21003</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12672" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:57:03
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:57:03.6265485Z" />
+    <EventRecordID>21002</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12672" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:27
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:27.3391420Z" />
+    <EventRecordID>21001</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12672" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:27
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:27.3391325Z" />
+    <EventRecordID>21000</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12672" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:25
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:25.3602918Z" />
+    <EventRecordID>20999</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12672" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">MicrosoftOffice*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:50.7713585Z</Data>
+    <Data Name="ClientProcessId">9748</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:25
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:25.2075003Z" />
+    <EventRecordID>20998</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">MicrosoftOffice16_Data:live:cid=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:52.2336732Z</Data>
+    <Data Name="ClientProcessId">15700</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:24
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:24.7072653Z" />
+    <EventRecordID>20997</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDrive Cached Credential</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:50.7713585Z</Data>
+    <Data Name="ClientProcessId">9748</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:18
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:18.6057125Z" />
+    <EventRecordID>20996</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">MicrosoftAccount:user=02oqlqucmrvqbjgc</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:56:18
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:56:18.5976043Z" />
+    <EventRecordID>20995</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">MicrosoftAccount:user=02oqlqucmrvqbjgc</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:52
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:52.0825239Z" />
+    <EventRecordID>20994</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDrive Cached Credential*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:50.7713585Z</Data>
+    <Data Name="ClientProcessId">9748</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:52
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:52.0439119Z" />
+    <EventRecordID>20993</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">MicrosoftOffice*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:50.7713585Z</Data>
+    <Data Name="ClientProcessId">9748</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:52
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:52.0055694Z" />
+    <EventRecordID>20992</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDrive Cached Credential</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:50.7713585Z</Data>
+    <Data Name="ClientProcessId">9748</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:50
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:50.4288773Z" />
+    <EventRecordID>20991</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDrive-INTCachedCredential*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:42.5610399Z</Data>
+    <Data Name="ClientProcessId">12520</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:50
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:50.4287582Z" />
+    <EventRecordID>20990</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDriveCachedCredential*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:42.5610399Z</Data>
+    <Data Name="ClientProcessId">12520</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:50
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 읽기
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:50.3395013Z" />
+    <EventRecordID>20989</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">SkyDrive-INT Cached Credential</Data>
+    <Data Name="Type">1</Data>
+    <Data Name="CountOfCredentialsReturned">1</Data>
+    <Data Name="ReadOperation">%%8099</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:42.5610399Z</Data>
+    <Data Name="ClientProcessId">12520</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:50
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 읽기
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:50.3393836Z" />
+    <EventRecordID>20988</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">SkyDrive Cached Credential</Data>
+    <Data Name="Type">1</Data>
+    <Data Name="CountOfCredentialsReturned">1</Data>
+    <Data Name="ReadOperation">%%8099</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:42.5610399Z</Data>
+    <Data Name="ClientProcessId">12520</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:50
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:50.2107343Z" />
+    <EventRecordID>20987</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDrive-INTCachedCredential*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:42.5610399Z</Data>
+    <Data Name="ClientProcessId">12520</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:50
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:50.2106245Z" />
+    <EventRecordID>20986</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">OneDriveCachedCredential*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:42.5610399Z</Data>
+    <Data Name="ClientProcessId">12520</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:49
+이벤트 ID:        4798
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+사용자의 로컬 그룹 구성원이 열거되었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+
+사용자:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+
+프로세스 정보:
+	프로세스 ID:		0x1c20
+	프로세스 이름:		C:\Windows\explorer.exe
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4798</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:49.0150754Z" />
+    <EventRecordID>20985</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1116" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">IN310</Data>
+    <Data Name="TargetDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="TargetSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="CallerProcessId">0x1c20</Data>
+    <Data Name="CallerProcessName">C:\Windows\explorer.exe</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9661689Z" />
+    <EventRecordID>20984</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">WindowsLive:(cert):name=02oqlqucmrvqbjgc;serviceuri=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9657546Z" />
+    <EventRecordID>20983</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">WindowsLive:(token):name=02oqlqucmrvqbjgc;serviceuri=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9656429Z" />
+    <EventRecordID>20982</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">MicrosoftAccount:user=02oqlqucmrvqbjgc</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9627565Z" />
+    <EventRecordID>20981</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">WindowsLive:target=virtualapp/didlogical</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">1</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">0</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9626566Z" />
+    <EventRecordID>20980</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">WindowsLive:(cert):name=02oqlqucmrvqbjgc;serviceuri=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		DESKTOP-CTN342B\IN310
+	계정 이름:		IN310
+	계정 도메인:		DESKTOP-CTN342B
+	로그온 ID:		0x4C993C4A
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9622798Z" />
+    <EventRecordID>20979</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-21-2489766778-3816559591-2462940862-1001</Data>
+    <Data Name="SubjectUserName">IN310</Data>
+    <Data Name="SubjectDomainName">DESKTOP-CTN342B</Data>
+    <Data Name="SubjectLogonId">0x4c993c4a</Data>
+    <Data Name="TargetName">WindowsLive:(token):name=02oqlqucmrvqbjgc;serviceuri=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9585463Z" />
+    <EventRecordID>20978</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetName">WindowsLive:target=virtualapp/didlogical</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">1</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">0</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9584435Z" />
+    <EventRecordID>20977</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetName">WindowsLive:(cert):name=02znkxcdzluehakb;serviceuri=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        5379
+작업 범주:         User Account Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+자격 증명 관리자 자격 증명을 읽었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+	읽기 작업:		자격 증명 열거
+
+이 이벤트는 사용자가 자격 증명 관리자에서 저장된 자격 증명에 대해 읽기 작업을 수행할 때 발생합니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>5379</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13824</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.9580657Z" />
+    <EventRecordID>20976</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetName">WindowsLive:(token):name=02znkxcdzluehakb;serviceuri=*</Data>
+    <Data Name="Type">0</Data>
+    <Data Name="CountOfCredentialsReturned">0</Data>
+    <Data Name="ReadOperation">%%8100</Data>
+    <Data Name="ReturnCode">3221226021</Data>
+    <Data Name="ProcessCreationTime">2022-11-08T04:55:17.8463410Z</Data>
+    <Data Name="ClientProcessId">13692</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.8424698Z" />
+    <EventRecordID>20975</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:17
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:17.8424592Z" />
+    <EventRecordID>20974</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:11
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:11.1684420Z" />
+    <EventRecordID>20973</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:55:11
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:55:11.1684329Z" />
+    <EventRecordID>20972</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:18
+이벤트 ID:        4799
+작업 범주:         Security Group Management
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+보안 기능이 설정된 로컬 구성원이 열거되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+그룹:
+	보안 ID:		BUILTIN\Administrators
+	그룹 이름:		Administrators
+	그룹 도메인:		Builtin
+
+프로세스 정보:
+	프로세스 ID:		0x3da0
+	프로세스 이름:		C:\Windows\System32\svchost.exe
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4799</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>13826</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:18.6840325Z" />
+    <EventRecordID>20971</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">Administrators</Data>
+    <Data Name="TargetDomainName">Builtin</Data>
+    <Data Name="TargetSid">S-1-5-32-544</Data>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="CallerProcessId">0x3da0</Data>
+    <Data Name="CallerProcessName">C:\Windows\System32\svchost.exe</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:14
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:14.1954470Z" />
+    <EventRecordID>20970</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:14
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:14.1954283Z" />
+    <EventRecordID>20969</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:12
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:12.1104395Z" />
+    <EventRecordID>20968</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:12
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:12.1104309Z" />
+    <EventRecordID>20967</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:04
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:04.6273804Z" />
+    <EventRecordID>20966</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:54:04
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:54:04.6273656Z" />
+    <EventRecordID>20965</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1852" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:53:31
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:53:31.7044734Z" />
+    <EventRecordID>20964</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:53:31
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:53:31.7044634Z" />
+    <EventRecordID>20963</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:53:25
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:53:25.2771249Z" />
+    <EventRecordID>20962</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:53:25
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:53:25.2771074Z" />
+    <EventRecordID>20961</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:48:08
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:48:08.0127307Z" />
+    <EventRecordID>20960</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:48:08
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:48:08.0127185Z" />
+    <EventRecordID>20959</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:44:19
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:44:19.8565543Z" />
+    <EventRecordID>20958</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12452" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:44:19
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:44:19.8565413Z" />
+    <EventRecordID>20957</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12452" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:30:27
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:30:27.0691783Z" />
+    <EventRecordID>20956</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="6684" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:30:27
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:30:27.0691595Z" />
+    <EventRecordID>20955</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="6684" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:27:48
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:27:48.9338156Z" />
+    <EventRecordID>20954</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:27:48
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:27:48.9338069Z" />
+    <EventRecordID>20953</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:26:36
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:26:36.8709602Z" />
+    <EventRecordID>20952</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12432" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:26:36
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:26:36.8709421Z" />
+    <EventRecordID>20951</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="12432" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:23:23
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:23:23.5686172Z" />
+    <EventRecordID>20950</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:23:23
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:23:23.5685979Z" />
+    <EventRecordID>20949</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:18:48
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:18:48.3569830Z" />
+    <EventRecordID>20948</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="7940" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:18:48
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:18:48.3569704Z" />
+    <EventRecordID>20947</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="7940" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:15:48
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:15:48.2505775Z" />
+    <EventRecordID>20946</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="15324" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:15:48
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:15:48.2505674Z" />
+    <EventRecordID>20945</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="15324" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:13:24
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:13:24.7560164Z" />
+    <EventRecordID>20944</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1688" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:13:24
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:13:24.7559974Z" />
+    <EventRecordID>20943</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="1688" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:11:10
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:11:10.1051065Z" />
+    <EventRecordID>20942</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="13720" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:11:10
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:11:10.1050888Z" />
+    <EventRecordID>20941</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="13720" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:06:30
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:06:30.0695792Z" />
+    <EventRecordID>20940</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:06:30
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:06:30.0695602Z" />
+    <EventRecordID>20939</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="9956" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:03:47
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:03:47.7765342Z" />
+    <EventRecordID>20938</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="6448" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 1:03:47
+이벤트 ID:        4624
+작업 범주:         Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+계정이 성공적으로 로그온되었습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		DESKTOP-CTN342B$
+	계정 도메인:		WORKGROUP
+	로그온 ID:		0x3E7
+
+로그온 정보:
+	로그온 유형:		5
+	제한된 관리 모드:	-
+	가상 계정:		아니요
+	상승된 토큰:		예
+
+가장 수준:		가장
+
+새 로그온:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+	연결된 로그온 ID:		0x0
+	네트워크 계정 이름:	-
+	네트워크 계정 도메인:	-
+	로그온 GUID:		{00000000-0000-0000-0000-000000000000}
+
+프로세스 정보:
+	프로세스 ID:		0x2f0
+	프로세스 이름:		C:\Windows\System32\services.exe
+
+네트워크 정보:
+	워크스테이션 이름:	-
+	원본 네트워크 주소:	-
+	원본 포트:		-
+
+인증 세부 정보:
+	로그온 프로세스:		Advapi  
+	인증 패키지:	Negotiate
+	전송된 서비스:	-
+	패키지 이름(NTLM 전용):	-
+	키 길이:		0
+
+이 이벤트는 로그온 세션이 만들어질 때 액세스했던 컴퓨터에 생성됩니다.
+
+주체 필드는 로그온을 요청한 로컬 시스템의 계정을 나타냅니다. 이것은 주로 서버 서비스와 같은 서비스 또는 Winlogon.exe나 Services.exe와 같은 로컬 프로세스입니다.
+
+로그온 유형 필드는 발생한 로그온의 종류를 나타냅니다. 가장 일반적인 유형은 2(대화형)와 3(네트워크)입니다.
+
+새 로그온 필드는 새 로그온을 만든 계정, 즉 로그온된 계정을 나타냅니다.
+
+네트워크 필드는 원격 로그온 요청이 시작된 위치를 나타냅니다. 워크스테이션 이름은 항상 사용할 수 있는 것은 아니며 어떤 경우에는 비워 둘 수 있습니다.
+
+가장 수준 필드는 로그온 세션의 프로세스에서 가장할 수 있는 범위를 나타냅니다.
+
+인증 정보 필드는 이 특정 로그온 요청에 대한 자세한 정보를 제공합니다.
+	- 로그온 GUID는 이 이벤트를 KDC 이벤트와 연관시키는 데 사용할 수 있는 고유 식별자입니다.
+	 - 전송된 서비스는 이 로그온 요청과 관련된 중간 서비스를 나타냅니다.
+	 - 패키지 이름은 NTLM 프로토콜 간에 사용된 하위 프로토콜을 나타냅니다.
+	 - 키 길이는 생성된 세션 키의 길이를 나타냅니다. 이 값은 요청된 세션 키가 없는 경우 0이 됩니다.
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4624</EventID>
+    <Version>2</Version>
+    <Level>0</Level>
+    <Task>12544</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T04:03:47.7765149Z" />
+    <EventRecordID>20937</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="6448" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">DESKTOP-CTN342B$</Data>
+    <Data Name="SubjectDomainName">WORKGROUP</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="TargetUserSid">S-1-5-18</Data>
+    <Data Name="TargetUserName">SYSTEM</Data>
+    <Data Name="TargetDomainName">NT AUTHORITY</Data>
+    <Data Name="TargetLogonId">0x3e7</Data>
+    <Data Name="LogonType">5</Data>
+    <Data Name="LogonProcessName">Advapi  </Data>
+    <Data Name="AuthenticationPackageName">Negotiate</Data>
+    <Data Name="WorkstationName">-</Data>
+    <Data Name="LogonGuid">{00000000-0000-0000-0000-000000000000}</Data>
+    <Data Name="TransmittedServices">-</Data>
+    <Data Name="LmPackageName">-</Data>
+    <Data Name="KeyLength">0</Data>
+    <Data Name="ProcessId">0x2f0</Data>
+    <Data Name="ProcessName">C:\Windows\System32\services.exe</Data>
+    <Data Name="IpAddress">-</Data>
+    <Data Name="IpPort">-</Data>
+    <Data Name="ImpersonationLevel">%%1833</Data>
+    <Data Name="RestrictedAdminMode">-</Data>
+    <Data Name="TargetOutboundUserName">-</Data>
+    <Data Name="TargetOutboundDomainName">-</Data>
+    <Data Name="VirtualAccount">%%1843</Data>
+    <Data Name="TargetLinkedLogonId">0x0</Data>
+    <Data Name="ElevatedToken">%%1842</Data>
+  </EventData>
+</Event>
+
+로그 이름:         Security
+원본:            Microsoft-Windows-Security-Auditing
+날짜:            2022-11-08 오후 12:57:21
+이벤트 ID:        4672
+작업 범주:         Special Logon
+수준:            정보
+키워드:           감사 성공
+사용자:           해당 없음
+컴퓨터:           DESKTOP-CTN342B
+설명:
+특수 권한을 새 로그온에 할당했습니다.
+
+주체:
+	보안 ID:		SYSTEM
+	계정 이름:		SYSTEM
+	계정 도메인:		NT AUTHORITY
+	로그온 ID:		0x3E7
+
+권한:		SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege
+이벤트 Xml:
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-a5ba-3e3b0328c30d}" />
+    <EventID>4672</EventID>
+    <Version>0</Version>
+    <Level>0</Level>
+    <Task>12548</Task>
+    <Opcode>0</Opcode>
+    <Keywords>0x8020000000000000</Keywords>
+    <TimeCreated SystemTime="2022-11-08T03:57:21.3563851Z" />
+    <EventRecordID>20936</EventRecordID>
+    <Correlation ActivityID="{6e82f168-bd9b-0001-e7f1-826e9bbdd801}" />
+    <Execution ProcessID="772" ThreadID="15680" />
+    <Channel>Security</Channel>
+    <Computer>DESKTOP-CTN342B</Computer>
+    <Security />
+  </System>
+  <EventData>
+    <Data Name="SubjectUserSid">S-1-5-18</Data>
+    <Data Name="SubjectUserName">SYSTEM</Data>
+    <Data Name="SubjectDomainName">NT AUTHORITY</Data>
+    <Data Name="SubjectLogonId">0x3e7</Data>
+    <Data Name="PrivilegeList">SeAssignPrimaryTokenPrivilege
+			SeTcbPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeDebugPrivilege
+			SeAuditPrivilege
+			SeSystemEnvironmentPrivilege
+			SeImpersonatePrivilege
+			SeDelegateSessionUserImpersonatePrivilege</Data>
+  </EventData>
+</Event>
