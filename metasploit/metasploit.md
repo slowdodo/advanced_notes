@@ -8,3 +8,8 @@
 | set     | It's a context-specific variable that configures options for the current module                     |
 | unset   | Removes previously set parameters                                                                   |
 | run     | Executes the current module                                                                         |
+
+
+
+
+https://www.makeuseof.com/beginners-guide-metasploit-kali-linux/
